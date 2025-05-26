@@ -3,12 +3,10 @@
 import {
   CreditCard,
   Globe2,
-  Zap,
   Shield,
   Clock,
   FileText,
   BadgeCheck,
-  DollarSign,
 } from 'lucide-react';
 
 const services = [

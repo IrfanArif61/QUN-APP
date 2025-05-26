@@ -60,7 +60,7 @@ export function SuccessStories() {
             ></div>
             <CardContent className="p-8 pt-0">
               <p className="text-white/90 italic mb-6 text-lg">
-                "{story.quote}"
+                &quot;{story.quote}&quot;
               </p>
               <div className="flex items-center justify-between">
                 <div>
