@@ -57,13 +57,14 @@ export function ContactForm() {
           </p>
           <ul className="space-y-3 text-white/80 text-base">
             <li className="flex items-center gap-2">
-              <Mail className="w-5 h-5 text-blue-300" /> support@qunusa.com
+              <Mail className="w-5 h-5 text-blue-300" /> Abhatti20169@gmail.com
             </li>
             <li className="flex items-center gap-2">
-              <Phone className="w-5 h-5 text-teal-300" /> +1 (555) 123-4567
+              <Phone className="w-5 h-5 text-teal-300" /> +1 (413) 474-8410
             </li>
             <li className="flex items-center gap-2">
-              <MapPin className="w-5 h-5 text-purple-300" /> New York, NY, USA
+              <MapPin className="w-5 h-5 text-purple-300" /> Toledo city, Ohio
+              state
             </li>
             <li className="flex items-center gap-2">
               <MessageCircle className="w-5 h-5 text-pink-300" /> Live chat
