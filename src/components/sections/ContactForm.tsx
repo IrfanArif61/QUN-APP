@@ -3,13 +3,28 @@
 import {useState} from 'react';
 import {Input} from '@/components/ui/input';
 import {Textarea} from '@/components/ui/textarea';
-import {Mail, User, Phone, MapPin, MessageCircle} from 'lucide-react';
+import {Mail, User, Phone, MapPin, MessageCircle, Building, Briefcase} from 'lucide-react';
+
+const serviceOptions = [
+  'Web Development',
+  'Application Development',
+  'Data Analysis',
+  'Payment Solutions',
+  'E-commerce Development',
+  'SEO & Digital Marketing',
+  'IT Consulting',
+  'Amazon/eBay Training',
+  'Other'
+];
 
 export function ContactForm() {
   const [form, setForm] = useState({
     name: '',
     email: '',
     company: '',
+    phone: '',
+    service: '',
+    budget: '',
     message: '',
   });
   const [loading, setLoading] = useState(false);
@@ -28,8 +43,8 @@ export function ContactForm() {
         body: JSON.stringify(form),
       });
       if (res.ok) {
-        setSuccess('Thank you! Your inquiry has been sent.');
-        setForm({name: '', email: '', company: '', message: ''});
+        setSuccess('Thank you! We\'ll get back to you within 24 hours with a detailed proposal.');
+        setForm({name: '', email: '', company: '', phone: '', service: '', budget: '', message: ''});
       } else {
         setError('Failed to send. Please try again later.');
       }
@@ -45,40 +60,85 @@ export function ContactForm() {
       id="contact"
       className="py-20 px-4 md:px-8 flex justify-center items-center bg-transparent"
     >
-      <div className="w-full max-w-5xl bg-transparent flex flex-col md:flex-row gap-10 items-center md:items-stretch">
+      <div className="w-full max-w-7xl bg-transparent flex flex-col lg:flex-row gap-12 items-center lg:items-stretch">
         {/* Left side: Info */}
-        <div className="flex-1 flex flex-col justify-center md:justify-start md:py-6 md:pl-4 mb-8 md:mb-0">
-          <h2 className="text-3xl md:text-4xl font-extrabold mb-3 text-white">
-            Contact Us
+        <div className="flex-1 flex flex-col justify-center lg:justify-start lg:py-8 lg:pr-8">
+          <h2 className="text-4xl md:text-5xl font-extrabold mb-4 text-white">
+            Let's Build Something Amazing Together
           </h2>
-          <p className="text-white/80 mb-6 text-base md:text-lg max-w-md">
-            Have questions or want to get started? Fill out the form and our
-            team will get back to you promptly. Or reach out directly:
+          <p className="text-white/80 mb-8 text-lg max-w-2xl leading-relaxed">
+            Ready to transform your business with cutting-edge technology? Get a free consultation 
+            and detailed project proposal. Our experts are here to turn your vision into reality.
           </p>
-          <ul className="space-y-3 text-white/80 text-base">
-            <li className="flex items-center gap-2">
-              <Mail className="w-5 h-5 text-blue-300" /> Abhatti20169@gmail.com
-            </li>
-            <li className="flex items-center gap-2">
-              <Phone className="w-5 h-5 text-teal-300" /> +1 (413) 474-8410
-            </li>
-            <li className="flex items-center gap-2">
-              <MapPin className="w-5 h-5 text-purple-300" /> Toledo city, Ohio
-              state
-            </li>
-            <li className="flex items-center gap-2">
-              <MessageCircle className="w-5 h-5 text-pink-300" /> Live chat
-              available 24/7
-            </li>
-          </ul>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <div className="space-y-4">
+              <h3 className="text-xl font-bold text-white mb-4">Contact Information</h3>
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center">
+                  <Mail className="w-5 h-5 text-blue-300" />
+                </div>
+                <div>
+                  <div className="text-white font-medium">Email</div>
+                  <div className="text-white/70">Abhatti20169@gmail.com</div>
+                </div>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-lg bg-teal-500/20 flex items-center justify-center">
+                  <Phone className="w-5 h-5 text-teal-300" />
+                </div>
+                <div>
+                  <div className="text-white font-medium">Phone</div>
+                  <div className="text-white/70">+1 (413) 474-8410</div>
+                </div>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-lg bg-purple-500/20 flex items-center justify-center">
+                  <MapPin className="w-5 h-5 text-purple-300" />
+                </div>
+                <div>
+                  <div className="text-white font-medium">Location</div>
+                  <div className="text-white/70">Toledo, Ohio, USA</div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="space-y-4">
+              <h3 className="text-xl font-bold text-white mb-4">Why Choose Us?</h3>
+              <div className="space-y-3">
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-gradient-to-r from-blue-400 to-teal-400"></div>
+                  <span className="text-white/80">Free consultation & project analysis</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-gradient-to-r from-purple-400 to-pink-400"></div>
+                  <span className="text-white/80">24-hour response guarantee</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-gradient-to-r from-teal-400 to-blue-400"></div>
+                  <span className="text-white/80">Transparent pricing & timelines</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-gradient-to-r from-pink-400 to-purple-400"></div>
+                  <span className="text-white/80">Ongoing support & maintenance</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+        
         {/* Right side: Form */}
         <div className="flex-1 flex items-center justify-center">
-          <div className="w-full max-w-xl bg-white/5 backdrop-blur-lg rounded-3xl shadow-2xl border border-white/10 p-8 md:p-12 flex flex-col gap-6">
-            <form className="space-y-5" onSubmit={handleSubmit}>
+          <div className="w-full max-w-2xl bg-white/5 backdrop-blur-lg rounded-3xl shadow-2xl border border-white/10 p-8 md:p-10">
+            <div className="mb-8 text-center">
+              <h3 className="text-2xl font-bold text-white mb-2">Get Your Free Consultation</h3>
+              <p className="text-white/70">Tell us about your project and we'll provide a detailed proposal</p>
+            </div>
+            
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <Input
-                  placeholder="Your Name"
+                  placeholder="Your Name *"
                   icon={<User />}
                   required
                   value={form.name}
@@ -89,7 +149,7 @@ export function ContactForm() {
                 />
                 <Input
                   type="email"
-                  placeholder="Your Email"
+                  placeholder="Your Email *"
                   icon={<Mail />}
                   required
                   value={form.email}
@@ -99,17 +159,63 @@ export function ContactForm() {
                   className="bg-white/10 text-white border border-white/20 rounded-xl focus:border-blue-400 focus:bg-white/20 transition placeholder:text-white/50"
                 />
               </div>
-              <Input
-                placeholder="Company Name"
-                required
-                value={form.company}
-                onChange={(e) =>
-                  setForm((f) => ({...f, company: e.target.value}))
-                }
-                className="bg-white/10 text-white border border-white/20 rounded-xl focus:border-blue-400 focus:bg-white/20 transition placeholder:text-white/50"
-              />
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <Input
+                  placeholder="Company Name *"
+                  icon={<Building />}
+                  required
+                  value={form.company}
+                  onChange={(e) =>
+                    setForm((f) => ({...f, company: e.target.value}))
+                  }
+                  className="bg-white/10 text-white border border-white/20 rounded-xl focus:border-blue-400 focus:bg-white/20 transition placeholder:text-white/50"
+                />
+                <Input
+                  type="tel"
+                  placeholder="Phone Number"
+                  icon={<Phone />}
+                  value={form.phone}
+                  onChange={(e) =>
+                    setForm((f) => ({...f, phone: e.target.value}))
+                  }
+                  className="bg-white/10 text-white border border-white/20 rounded-xl focus:border-blue-400 focus:bg-white/20 transition placeholder:text-white/50"
+                />
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="relative">
+                  <div className="absolute left-3 top-1/2 -translate-y-1/2 text-white/50">
+                    <Briefcase className="w-5 h-5" />
+                  </div>
+                  <select
+                    required
+                    value={form.service}
+                    onChange={(e) =>
+                      setForm((f) => ({...f, service: e.target.value}))
+                    }
+                    className="w-full h-10 pl-10 pr-3 bg-white/10 text-white border border-white/20 rounded-xl focus:border-blue-400 focus:bg-white/20 transition"
+                  >
+                    <option value="" className="bg-gray-800">Select Service *</option>
+                    {serviceOptions.map((service) => (
+                      <option key={service} value={service} className="bg-gray-800">
+                        {service}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+                <Input
+                  placeholder="Budget Range (Optional)"
+                  value={form.budget}
+                  onChange={(e) =>
+                    setForm((f) => ({...f, budget: e.target.value}))
+                  }
+                  className="bg-white/10 text-white border border-white/20 rounded-xl focus:border-blue-400 focus:bg-white/20 transition placeholder:text-white/50"
+                />
+              </div>
+              
               <Textarea
-                placeholder="Describe your business and payout needs..."
+                placeholder="Tell us about your project, goals, and requirements... *"
                 required
                 value={form.message}
                 onChange={(e) =>
@@ -117,20 +223,22 @@ export function ContactForm() {
                 }
                 className="bg-white/10 text-white border border-white/20 rounded-xl focus:border-blue-400 focus:bg-white/20 transition placeholder:text-white/50 min-h-[120px]"
               />
+              
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-gradient-to-r from-purple-500 via-blue-500 to-teal-400 hover:from-pink-500 hover:to-blue-500 text-white font-bold py-3 rounded-2xl shadow-lg transition-all text-lg tracking-wide border-2 border-transparent hover:border-white/40 mt-2 disabled:opacity-60 disabled:cursor-not-allowed"
+                className="w-full bg-gradient-to-r from-purple-500 via-blue-500 to-teal-400 hover:from-pink-500 hover:to-blue-500 text-white font-bold py-4 rounded-2xl shadow-lg transition-all text-lg tracking-wide border-2 border-transparent hover:border-white/40 disabled:opacity-60 disabled:cursor-not-allowed"
               >
-                {loading ? 'Sending...' : '🚀 Submit Inquiry'}
+                {loading ? 'Sending...' : '🚀 Get Free Consultation'}
               </button>
+              
               {success && (
-                <div className="text-green-400 text-center font-semibold mt-2">
+                <div className="text-green-400 text-center font-semibold p-4 bg-green-400/10 rounded-xl border border-green-400/20">
                   {success}
                 </div>
               )}
               {error && (
-                <div className="text-red-400 text-center font-semibold mt-2">
+                <div className="text-red-400 text-center font-semibold p-4 bg-red-400/10 rounded-xl border border-red-400/20">
                   {error}
                 </div>
               )}

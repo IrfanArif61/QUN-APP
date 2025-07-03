@@ -13,16 +13,16 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'QUN USA – Seamless Global Payouts',
+  title: 'QUN USA – Premier IT Consultancy & Digital Solutions',
   description:
-    'Empowering remote workers and global companies with secure, fast payout services from the USA.',
+    'Leading IT consultancy offering web development, application development, data analysis, payment solutions, and e-commerce expertise. Transform your business with our comprehensive digital services.',
   icons: {
     icon: '/favicon.ico',
   },
   openGraph: {
-    title: 'QUN USA – Seamless Global Payouts',
+    title: 'QUN USA – Premier IT Consultancy & Digital Solutions',
     description:
-      'Empowering remote workers and global companies with secure, fast payout services from the USA.',
+      'Leading IT consultancy offering web development, application development, data analysis, payment solutions, and e-commerce expertise. Transform your business with our comprehensive digital services.',
     url: 'https://qun-app-7e6l.vercel.app/',
     siteName: 'QUN USA',
     images: [
@@ -30,16 +30,16 @@ export const metadata: Metadata = {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'QUN USA – Seamless Global Payouts',
+        alt: 'QUN USA – Premier IT Consultancy & Digital Solutions',
       },
     ],
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'QUN USA – Seamless Global Payouts',
+    title: 'QUN USA – Premier IT Consultancy & Digital Solutions',
     description:
-      'Empowering remote workers and global companies with secure, fast payout services from the USA.',
+      'Leading IT consultancy offering web development, application development, data analysis, payment solutions, and e-commerce expertise. Transform your business with our comprehensive digital services.',
     images: ['/og-image.png'],
   },
 };

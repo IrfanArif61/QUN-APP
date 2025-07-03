@@ -1,1 +1,91 @@
 @import 'tailwindcss';
+
+/* Custom animations */
+.animate-blob {
+  animation: blob 18s infinite alternate;
+}
+
+.animate-blob2 {
+  animation: blob2 20s infinite alternate;
+}
+
+.animate-blob3 {
+  animation: blob3 22s infinite alternate;
+}
+
+@keyframes blob {
+  0% {
+    transform: scale(1) translate(-50%, -50%);
+  }
+  100% {
+    transform: scale(1.15) translate(-48%, -52%);
+  }
+}
+
+@keyframes blob2 {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  100% {
+    transform: scale(1.2) translate(-10%, -10%);
+  }
+}
+
+@keyframes blob3 {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  100% {
+    transform: scale(1.1) translate(5%, 5%);
+  }
+}
+
+.animate-gradientMove {
+  background-size: 200% 200%;
+  animation: gradientMove 6s ease-in-out infinite alternate;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-pulseGlow {
+  animation: pulseGlow 2.5s infinite alternate;
+}
+
+@keyframes pulseGlow {
+  0% {
+    filter: drop-shadow(0 0 8px #67e8f9);
+  }
+  100% {
+    filter: drop-shadow(0 0 24px #a5b4fc);
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #3b82f6, #06b6d4);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #2563eb, #0891b2);
+}
