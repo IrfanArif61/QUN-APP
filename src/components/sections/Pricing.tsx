@@ -5,7 +5,7 @@ import {Check, Star, Zap, Crown, ArrowRight} from 'lucide-react';
 const pricingPlans = [
   {
     name: 'Starter',
-    icon: <Zap className="w-8 h-8 text-blue-400" />,
+    icon: <Zap className="w-8 h-8 text-gray-700" />,
     price: '$400',
     period: 'Starting from',
     description: 'Perfect for small businesses and startups looking to establish their digital presence',
@@ -20,13 +20,13 @@ const pricingPlans = [
       'Basic analytics setup'
     ],
     popular: false,
-    gradient: 'from-blue-500 to-cyan-500',
-    bgGradient: 'from-blue-500/10 to-cyan-500/10',
-    borderGradient: 'from-blue-500/30 to-cyan-500/30'
+    gradient: 'from-gray-600 to-gray-800',
+    bgGradient: 'from-gray-50 to-gray-100',
+    borderGradient: 'from-gray-200 to-gray-300'
   },
   {
     name: 'Professional',
-    icon: <Star className="w-8 h-8 text-purple-400" />,
+    icon: <Star className="w-8 h-8 text-gray-700" />,
     price: '$1,000',
     period: 'Starting from',
     description: 'Comprehensive solution for growing businesses with advanced features and integrations',
@@ -44,13 +44,13 @@ const pricingPlans = [
       'Third-party API integrations'
     ],
     popular: true,
-    gradient: 'from-purple-500 to-pink-500',
-    bgGradient: 'from-purple-500/10 to-pink-500/10',
-    borderGradient: 'from-purple-500/30 to-pink-500/30'
+    gradient: 'from-gray-700 to-gray-900',
+    bgGradient: 'from-gray-100 to-gray-200',
+    borderGradient: 'from-gray-300 to-gray-400'
   },
   {
     name: 'Enterprise',
-    icon: <Crown className="w-8 h-8 text-yellow-400" />,
+    icon: <Crown className="w-8 h-8 text-gray-700" />,
     price: 'Custom',
     period: 'Quote based',
     description: 'Full-scale digital transformation for large organizations with complex requirements',
@@ -70,9 +70,9 @@ const pricingPlans = [
       'Ongoing consultation'
     ],
     popular: false,
-    gradient: 'from-yellow-500 to-orange-500',
-    bgGradient: 'from-yellow-500/10 to-orange-500/10',
-    borderGradient: 'from-yellow-500/30 to-orange-500/30'
+    gradient: 'from-gray-600 to-gray-800',
+    bgGradient: 'from-gray-50 to-gray-100',
+    borderGradient: 'from-gray-200 to-gray-300'
   }
 ];
 
@@ -115,24 +115,24 @@ export function Pricing() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-extrabold mb-4 bg-gradient-to-r from-blue-400 via-purple-400 to-teal-300 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
             Transparent Pricing
           </h2>
-          <p className="text-lg text-white/80 max-w-3xl mx-auto mb-8">
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
             Choose the perfect package for your business needs. All plans include our commitment to quality, 
             timely delivery, and ongoing support to ensure your success.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <div className="flex items-center gap-2 text-white/70">
-              <Check className="w-5 h-5 text-green-400" />
+            <div className="flex items-center gap-2 text-gray-600">
+              <Check className="w-5 h-5 text-green-600" />
               <span>No hidden fees</span>
             </div>
-            <div className="flex items-center gap-2 text-white/70">
-              <Check className="w-5 h-5 text-green-400" />
+            <div className="flex items-center gap-2 text-gray-600">
+              <Check className="w-5 h-5 text-green-600" />
               <span>Free consultation</span>
             </div>
-            <div className="flex items-center gap-2 text-white/70">
-              <Check className="w-5 h-5 text-green-400" />
+            <div className="flex items-center gap-2 text-gray-600">
+              <Check className="w-5 h-5 text-green-600" />
               <span>Money-back guarantee</span>
             </div>
           </div>
@@ -145,37 +145,37 @@ export function Pricing() {
               key={index}
               className={`relative rounded-3xl p-8 transition-all duration-300 hover:scale-105 ${
                 plan.popular 
-                  ? 'bg-white/10 border-2 border-purple-400/50 shadow-2xl shadow-purple-500/20' 
-                  : 'bg-white/5 border border-white/10'
+                  ? 'bg-white border-2 border-gray-900 shadow-2xl' 
+                  : 'bg-white border border-gray-200 shadow-lg'
               }`}
             >
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                  <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">
+                  <span className="bg-gray-900 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">
                     Most Popular
                   </span>
                 </div>
               )}
               
               <div className="text-center mb-8">
-                <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${plan.bgGradient} mb-4`}>
+                <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gray-50 border border-gray-200 mb-4`}>
                   {plan.icon}
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
                 <div className="mb-4">
-                  <span className={`text-4xl font-extrabold bg-gradient-to-r ${plan.gradient} bg-clip-text text-transparent`}>
+                  <span className={`text-4xl font-bold text-gray-900`}>
                     {plan.price}
                   </span>
-                  <span className="text-white/60 ml-2">{plan.period}</span>
+                  <span className="text-gray-500 ml-2">{plan.period}</span>
                 </div>
-                <p className="text-white/70 text-sm leading-relaxed">{plan.description}</p>
+                <p className="text-gray-600 text-sm leading-relaxed">{plan.description}</p>
               </div>
 
               <div className="space-y-4 mb-8">
                 {plan.features.map((feature, idx) => (
                   <div key={idx} className="flex items-start gap-3">
-                    <Check className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
-                    <span className="text-white/80 text-sm">{feature}</span>
+                    <Check className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+                    <span className="text-gray-700 text-sm">{feature}</span>
                   </div>
                 ))}
               </div>
@@ -184,8 +184,8 @@ export function Pricing() {
                 href="#contact"
                 className={`w-full py-4 rounded-2xl font-bold text-lg transition-all block text-center ${
                   plan.popular
-                    ? `bg-gradient-to-r ${plan.gradient} text-white hover:shadow-lg hover:shadow-purple-500/25`
-                    : 'bg-white/10 text-white hover:bg-white/20 border border-white/20'
+                    ? `bg-gray-900 text-white hover:bg-gray-800 hover:shadow-lg`
+                    : 'bg-gray-100 text-gray-900 hover:bg-gray-200 border border-gray-200'
                 }`}
               >
                 Get Started
@@ -196,10 +196,10 @@ export function Pricing() {
         </div>
 
         {/* Additional Services */}
-        <div className="bg-white/5 rounded-3xl p-8 md:p-12 border border-white/10">
+        <div className="bg-gray-50 rounded-3xl p-8 md:p-12 border border-gray-200">
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-white mb-4">Additional Services</h3>
-            <p className="text-white/70 max-w-2xl mx-auto">
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">Additional Services</h3>
+            <p className="text-gray-600 max-w-2xl mx-auto">
               Need something specific? We offer individual services and custom solutions 
               tailored to your unique requirements.
             </p>
@@ -209,13 +209,13 @@ export function Pricing() {
             {additionalServices.map((service, index) => (
               <div
                 key={index}
-                className="bg-white/5 rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all"
+                className="bg-white rounded-2xl p-6 border border-gray-200 hover:shadow-md transition-all"
               >
                 <div className="flex justify-between items-start mb-3">
-                  <h4 className="text-lg font-semibold text-white">{service.service}</h4>
-                  <span className="text-blue-400 font-bold text-sm">{service.price}</span>
+                  <h4 className="text-lg font-semibold text-gray-900">{service.service}</h4>
+                  <span className="text-gray-700 font-bold text-sm">{service.price}</span>
                 </div>
-                <p className="text-white/60 text-sm">{service.description}</p>
+                <p className="text-gray-600 text-sm">{service.description}</p>
               </div>
             ))}
           </div>
@@ -223,24 +223,24 @@ export function Pricing() {
 
         {/* CTA Section */}
         <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-purple-500/10 via-blue-500/10 to-teal-500/10 rounded-3xl p-8 border border-white/10">
-            <h3 className="text-2xl font-bold text-white mb-4">
+          <div className="bg-gray-100 rounded-3xl p-8 border border-gray-200">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
               Not sure which plan is right for you?
             </h3>
-            <p className="text-white/70 mb-6 max-w-2xl mx-auto">
+            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
               Schedule a free consultation with our experts. We'll analyze your requirements 
               and recommend the best solution for your business goals and budget.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="#contact"
-                className="px-8 py-3 rounded-full bg-gradient-to-r from-purple-500 via-blue-500 to-teal-400 text-white font-bold hover:scale-105 transition-all shadow-lg"
+                className="px-8 py-3 rounded-full bg-gray-900 text-white font-bold hover:bg-gray-800 hover:scale-105 transition-all shadow-lg"
               >
                 Schedule Free Consultation
               </a>
               <a
                 href="tel:+14134748410"
-                className="px-8 py-3 rounded-full bg-white/10 text-white font-semibold border border-white/20 hover:bg-white/20 transition-all"
+                className="px-8 py-3 rounded-full bg-white text-gray-900 font-semibold border border-gray-200 hover:bg-gray-50 transition-all"
               >
                 Call: +1 (413) 474-8410
               </a>

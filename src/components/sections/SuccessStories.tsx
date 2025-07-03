@@ -10,7 +10,7 @@ const stories = [
     role: 'CEO',
     company: 'TechRetail Solutions',
     location: 'California, USA',
-    accent: 'from-blue-400 to-indigo-500',
+    accent: 'from-gray-600 to-gray-800',
     project: 'E-commerce Platform Development',
   },
   {
@@ -20,7 +20,7 @@ const stories = [
     role: 'Operations Director',
     company: 'Global Manufacturing Inc.',
     location: 'Singapore',
-    accent: 'from-teal-400 to-blue-400',
+    accent: 'from-gray-700 to-gray-900',
     project: 'Business Intelligence Dashboard',
   },
   {
@@ -30,7 +30,7 @@ const stories = [
     role: 'Finance Manager',
     company: 'International Services Ltd.',
     location: 'Madrid, Spain',
-    accent: 'from-pink-400 to-purple-500',
+    accent: 'from-gray-600 to-gray-800',
     project: 'Payment Gateway Integration',
   },
   {
@@ -40,7 +40,7 @@ const stories = [
     role: 'Product Manager',
     company: 'HealthTech Innovations',
     location: 'Mumbai, India',
-    accent: 'from-yellow-400 to-pink-400',
+    accent: 'from-gray-700 to-gray-900',
     project: 'Mobile Application Development',
   },
   {
@@ -50,7 +50,7 @@ const stories = [
     role: 'Marketing Director',
     company: 'Digital Marketing Pro',
     location: 'London, UK',
-    accent: 'from-green-400 to-teal-400',
+    accent: 'from-gray-600 to-gray-800',
     project: 'SEO & Digital Marketing',
   },
   {
@@ -60,7 +60,7 @@ const stories = [
     role: 'Entrepreneur',
     company: 'E-commerce Ventures',
     location: 'Dubai, UAE',
-    accent: 'from-purple-400 to-blue-400',
+    accent: 'from-gray-700 to-gray-900',
     project: 'Amazon FBA Training & Setup',
   },
 ];
@@ -69,11 +69,11 @@ export function SuccessStories() {
   return (
     <section id="stories" className="bg-transparent py-20 px-4 md:px-8">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-4 bg-gradient-to-r from-pink-400 via-blue-400 to-teal-300 bg-clip-text text-transparent drop-shadow-lg">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-gray-900">
           Client Success Stories
         </h2>
-        <div className="mx-auto mb-6 h-1 w-32 rounded-full bg-gradient-to-r from-pink-400 via-blue-400 to-teal-300 blur-sm"></div>
-        <p className="text-lg text-center text-white/80 mb-16 max-w-3xl mx-auto">
+        <div className="mx-auto mb-6 h-1 w-32 rounded-full bg-gray-300"></div>
+        <p className="text-lg text-center text-gray-600 mb-16 max-w-3xl mx-auto">
           Discover how we've helped businesses across industries achieve their digital transformation goals 
           and drive measurable results through our comprehensive IT solutions.
         </p>
@@ -90,51 +90,51 @@ export function SuccessStories() {
               <CardContent className="p-8 h-full flex flex-col">
                 <div className="flex-1">
                   <div className="mb-4">
-                    <span className={`inline-block px-3 py-1 text-xs font-semibold rounded-full bg-gradient-to-r ${story.accent} text-white`}>
+                    <span className={`inline-block px-3 py-1 text-xs font-semibold rounded-full bg-gray-100 text-gray-700`}>
                       {story.project}
                     </span>
                   </div>
-                  <p className="text-white/90 italic mb-6 text-base leading-relaxed">
+                  <p className="text-gray-700 italic mb-6 text-base leading-relaxed">
                     "{story.quote}"
                   </p>
                 </div>
-                <div className="border-t border-white/10 pt-4">
+                <div className="border-t border-gray-200 pt-4">
                   <div className="flex items-start justify-between">
                     <div>
                       <p
-                        className={`font-bold text-lg text-transparent bg-clip-text bg-gradient-to-r ${story.accent}`}
+                        className={`font-bold text-lg text-gray-900`}
                       >
                         {story.author}
                       </p>
-                      <p className="text-sm text-white/70">{story.role}</p>
-                      <p className="text-sm text-white/60 font-medium">{story.company}</p>
+                      <p className="text-sm text-gray-600">{story.role}</p>
+                      <p className="text-sm text-gray-500 font-medium">{story.company}</p>
                     </div>
-                    <p className="text-xs text-white/50 text-right">{story.location}</p>
+                    <p className="text-xs text-gray-400 text-right">{story.location}</p>
                   </div>
                 </div>
               </CardContent>
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition bg-white/40 pointer-events-none" />
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-5 transition bg-gray-900 pointer-events-none" />
             </Card>
           ))}
         </div>
         
         {/* Stats Section */}
         <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          <div className="p-6 rounded-2xl bg-white/5 border border-white/10">
-            <div className="text-3xl font-bold text-white mb-2">500+</div>
-            <div className="text-white/60">Projects Completed</div>
+          <div className="p-6 rounded-2xl bg-white border border-gray-200 shadow-sm">
+            <div className="text-3xl font-bold text-gray-900 mb-2">500+</div>
+            <div className="text-gray-600">Projects Completed</div>
           </div>
-          <div className="p-6 rounded-2xl bg-white/5 border border-white/10">
-            <div className="text-3xl font-bold text-white mb-2">50+</div>
-            <div className="text-white/60">Countries Served</div>
+          <div className="p-6 rounded-2xl bg-white border border-gray-200 shadow-sm">
+            <div className="text-3xl font-bold text-gray-900 mb-2">50+</div>
+            <div className="text-gray-600">Countries Served</div>
           </div>
-          <div className="p-6 rounded-2xl bg-white/5 border border-white/10">
-            <div className="text-3xl font-bold text-white mb-2">98%</div>
-            <div className="text-white/60">Client Satisfaction</div>
+          <div className="p-6 rounded-2xl bg-white border border-gray-200 shadow-sm">
+            <div className="text-3xl font-bold text-gray-900 mb-2">98%</div>
+            <div className="text-gray-600">Client Satisfaction</div>
           </div>
-          <div className="p-6 rounded-2xl bg-white/5 border border-white/10">
-            <div className="text-3xl font-bold text-white mb-2">24/7</div>
-            <div className="text-white/60">Support Available</div>
+          <div className="p-6 rounded-2xl bg-white border border-gray-200 shadow-sm">
+            <div className="text-3xl font-bold text-gray-900 mb-2">24/7</div>
+            <div className="text-gray-600">Support Available</div>
           </div>
         </div>
       </div>
