@@ -1,5 +1,6 @@
 import {Hero} from '@/components/sections/Hero';
 import {Services} from '@/components/sections/Services';
+import {Pricing} from '@/components/sections/Pricing';
 import {SuccessStories} from '@/components/sections/SuccessStories';
 import {ContactForm} from '@/components/sections/ContactForm';
 import {Header} from '@/components/ui/Header';
@@ -22,6 +23,9 @@ export default function Home() {
           </section>
           <section className="transition-all duration-700 ease-in-out mt-8">
             <Services />
+          </section>
+          <section className="transition-all duration-700 ease-in-out mt-8">
+            <Pricing />
           </section>
           <section className="transition-all duration-700 ease-in-out mt-8">
             <SuccessStories />

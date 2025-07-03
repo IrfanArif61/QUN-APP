@@ -27,6 +27,12 @@ export function Header() {
             Services
           </a>
           <a
+            href="#pricing"
+            className="transition hover:text-purple-300 hover:underline underline-offset-4"
+          >
+            Pricing
+          </a>
+          <a
             href="#stories"
             className="transition hover:text-pink-300 hover:underline underline-offset-4"
           >
@@ -65,6 +71,13 @@ export function Header() {
               onClick={() => setIsMenuOpen(false)}
             >
               Services
+            </a>
+            <a
+              href="#pricing"
+              className="transition hover:text-purple-300 py-2"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Pricing
             </a>
             <a
               href="#stories"
