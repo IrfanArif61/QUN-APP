@@ -6,7 +6,7 @@ const pricingPlans = [
   {
     name: 'Starter',
     icon: <Zap className="w-8 h-8 text-blue-400" />,
-    price: '$2,500',
+    price: '$400',
     period: 'Starting from',
     description: 'Perfect for small businesses and startups looking to establish their digital presence',
     features: [
@@ -27,7 +27,7 @@ const pricingPlans = [
   {
     name: 'Professional',
     icon: <Star className="w-8 h-8 text-purple-400" />,
-    price: '$7,500',
+    price: '$2,500',
     period: 'Starting from',
     description: 'Comprehensive solution for growing businesses with advanced features and integrations',
     features: [
@@ -79,7 +79,7 @@ const pricingPlans = [
 const additionalServices = [
   {
     service: 'SEO Audit & Strategy',
-    price: '$500 - $2,000',
+    price: '$400 - $2,000',
     description: 'Comprehensive SEO analysis and optimization strategy'
   },
   {
@@ -180,8 +180,9 @@ export function Pricing() {
                 ))}
               </div>
 
-              <button
-                className={`w-full py-4 rounded-2xl font-bold text-lg transition-all ${
+              <a
+                href="#contact"
+                className={`w-full py-4 rounded-2xl font-bold text-lg transition-all block text-center ${
                   plan.popular
                     ? `bg-gradient-to-r ${plan.gradient} text-white hover:shadow-lg hover:shadow-purple-500/25`
                     : 'bg-white/10 text-white hover:bg-white/20 border border-white/20'
@@ -189,7 +190,7 @@ export function Pricing() {
               >
                 Get Started
                 <ArrowRight className="w-5 h-5 inline ml-2" />
-              </button>
+              </a>
             </div>
           ))}
         </div>
