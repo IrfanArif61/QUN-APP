@@ -27,7 +27,7 @@ const pricingPlans = [
   {
     name: 'Professional',
     icon: <Star className="w-8 h-8 text-purple-400" />,
-    price: '$2,500',
+    price: '$1,000',
     period: 'Starting from',
     description: 'Comprehensive solution for growing businesses with advanced features and integrations',
     features: [
